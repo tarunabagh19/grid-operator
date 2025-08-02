@@ -91,8 +91,9 @@ const data =
 
 
 const getMessage = (value) => {
-  if (value <= 1) return "The grid is very green! Now’s a great time to use energy.";
-  if (value >= 300) return "The grid is moderately green. Try to reduce usage if you can.";
+  if (value <= 0) return "The grid is very green! Now’s a great time to use energy.";
+  if (value >= 240) return "The grid is moderately green. Try to reduce usage if you can.";
+  if (value >= 1000) return "The grid is moderately red. Try to reduce usage if you can.";
   return "The grid is not very green right now. Consider waiting to use appliances.";
 };
 
